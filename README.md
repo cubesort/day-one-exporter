@@ -11,7 +11,7 @@ You need Node.js to run Day One Exporter. If you haven't already, download the l
 - Export your Day One entries in JSON format
 - Clone (or download and unzip) the repo
 - Change to Day One Exporter directory from Terminal (on Mac, you can drop Day One Exporter folder onto Terminal's dock icon)
-- Run the script by typing `Node exporter DAY_ONE_EXPORT_PATH` (substitute `DAY_ONE_EXPORT_PATH` with path of your Day One export; on Mac, you can drop a file exported from Day One to Terminal window to get the path)
+- Run the script by typing `node exporter DAY_ONE_EXPORT_PATH` (substitute `DAY_ONE_EXPORT_PATH` with path of the JSON file you got from step one; on Mac, you can drop the file to Terminal window to get its path)
 - You will find the results in `dist` folder inside Day One Exporter
 
 ## Road map
