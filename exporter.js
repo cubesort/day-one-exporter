@@ -6,7 +6,7 @@ if (!fs.existsSync('dist')) {
 }
 
 function formatDate(dateString) {
-  return dateString.split(/T|Z/).join(' ').trim();
+  return dateString.split(/T|Z/).join(' ').replace(/:/g, '.').trim();
 }
 
 function parseDayOneExport(entries) {
