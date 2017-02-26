@@ -1,26 +1,11 @@
 const fs = require('fs');
-const dayOneData = require(process.argv[2]);
+const exportEntries = require('./bin/helpers').exportEntries;
 
-if (!fs.existsSync('dist')) {
-  fs.mkdirSync('dist');
+const dayOneData = require(process.argv[2]).entries;
+const outputPath = 'dist';
+
+if (!fs.existsSync(outputPath)) {
+  fs.mkdirSync(outputPath);
 }
 
-function formatDate(dateString) {
-  return dateString.split(/T|Z/).join(' ').replace(/:/g, '.').trim();
-}
-
-function parseDayOneExport(entries) {
-  let title;
-
-  entries.map(entry => {
-    title = formatDate(entry.creationDate);
-
-    fs.writeFile(`dist/${title}.txt`, entry.text, err => {
-      if (err) {
-        console.error(`Failed exporting ${entry.creationDate}: ${err}`);
-      }
-    });
-  });
-}
-
-parseDayOneExport(dayOneData.entries);
+exportEntries(dayOneData, outputPath);
