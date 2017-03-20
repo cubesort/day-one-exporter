@@ -1,6 +1,6 @@
 # Day One Exporter
 
-Day One Exporter allows you to export your [Day One](http://dayoneapp.com) entries one entry per text file. Currently, it only exports text.
+Day One Exporter allows you to export your [Day One](http://dayoneapp.com) entries one entry per text file (*note* multiple entries of the same day are considered one entry for now). Currently, it only exports text.
 
 ## Prerequisite
 
@@ -19,7 +19,7 @@ You need Node.js to run Day One Exporter. If you haven't already, download the l
 I hope to add following features:
 
 - [ ] Option to use first line as title
-- [ ] Option to have entries of the same day in the same file
+- [ ] Option to export one entry per file regardless if they are of the same date
 - [ ] Ability to export multiple journals in one run
 - [ ] Option to preserve metadata (weather, location, etc)
 - [ ] Photos support
