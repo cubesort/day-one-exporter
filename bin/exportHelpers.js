@@ -3,15 +3,21 @@ const utils = require('./utils');
 
 function append(entries, dist) {
   let title;
+  let path;
 
   entries.forEach(entry => {
     title = utils.formatDate(entry.creationDate);
+    path = `${dist}/${title}.txt`;
 
-    fs.appendFile(`${dist}/${title}.txt`, entry.text, err => {
-      if (err) {
-        console.error(`Failed exporting ${entry.creationDate}: ${err}`);
-      }
-    });
+    if (fs.existsSync(path)) {
+      fs.appendFile(path, `\n\n----\n\n${entry.text}`, err => {
+        if (err) {
+          console.error(`Failed exporting ${entry.uuid}: ${err}`);
+        }
+      });
+    } else {
+      fs.writeFileSync(path, entry.text);
+    }
   });
 }
 
