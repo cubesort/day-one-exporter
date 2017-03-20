@@ -19,7 +19,7 @@ You need Node.js to run Day One Exporter. If you haven't already, download the l
 I hope to add following features:
 
 - [ ] Option to use first line as title
-- [ ] Option to export one entry per file regardless if they are of the same date
+- [ ] Option to export one entry per file regardless of creation date
 - [ ] Ability to export multiple journals in one run
 - [ ] Option to preserve metadata (weather, location, etc)
 - [ ] Photos support
