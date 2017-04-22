@@ -9,4 +9,4 @@ if (!fs.existsSync(outputPath)) {
   fs.mkdirSync(outputPath);
 }
 
-exportHelpers.append(dayOneData, outputPath);
+exportHelpers.append(dayOneData, outputPath, process.argv.slice(3));
